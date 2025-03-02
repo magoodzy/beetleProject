@@ -1,0 +1,139 @@
+
+
+<div *ngIf="PageNumber==0" class="container p-5" style="min-height: 40rem;">
+    <div class="row">
+        <div (click)="PageNumber=1" class="col-12 col-md-6 col-lg-4 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Human Resources</h4>
+                <h4 class="arabicFont">الموارد البشرية</h4>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Marketing</h4>
+                <h4 class="arabicFont">التســـويق</h4>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Purchasing</h4>
+                <h4 class="arabicFont">المشتريــات</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="PageNumber==1" class="container p-5" style="min-height: 40rem;">
+    <div class="row">
+        <div (click)="router.navigate(['/HR/hiringrequest'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Add Hiring Request</h4>
+                <h4 class="arabicFont">إضافة طلب توظيف</h4>
+            </div>
+        </div>
+        <div (click)="router.navigate(['/HR/hiringhistory'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Hiring Requests</h4>
+                <h4 class="arabicFont">طلبات التوظيف</h4>
+            </div>
+        </div>
+        <div (click)="router.navigate(['/HR/newuser/0'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Add New Application</h4>
+                <h4 class="arabicFont">إضافة استمارة توظيف جديد</h4>
+            </div>
+        </div>
+
+        <!-- <div (click)="router.navigate(['/Public/newapplicationform'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Add New User (External)</h4>
+                <h4 class="arabicFont">إضافة موظف جديد (خارجي)</h4>
+            </div>
+        </div> -->
+
+        <div (click)="router.navigate(['/HR/allusers'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Applications</h4>
+                <h4 class="arabicFont">استمارات تقديم</h4>
+            </div>
+        </div>
+
+        <div (click)="router.navigate(['/HR/masteradmin'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Master Data</h4>
+                <h4 class="arabicFont">بيانات الموظفين</h4>
+            </div>
+        </div>
+        <div (click)="router.navigate(['/HR/leaverequest'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Leave Request</h4>
+                <h4 class="arabicFont">طلب أجازة</h4>
+            </div>
+        </div>
+        <div (click)="router.navigate(['/HR/leavehistory'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Leaves History</h4>
+                <h4 class="arabicFont">سجل الأجازات</h4>
+            </div>
+        </div>
+
+        <div (click)="router.navigate(['/HR/leaverecords'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Leaves Balances</h4>
+                <h4 class="arabicFont">أرصدة الأجازات</h4>
+            </div>
+        </div>
+
+        <div (click)="router.navigate(['/HR/clearancerequest'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Resignation Request</h4>
+                <h4 class="arabicFont">طلب استقالة</h4>
+            </div>
+        </div>
+
+        <div (click)="router.navigate(['/HR/rewardsrequest'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Rewards Request</h4>
+                <h4 class="arabicFont">طلب مكافأة</h4>
+            </div>
+        </div>
+
+        <div (click)="router.navigate(['/HR/rewardshistory'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Rewards History</h4>
+                <h4 class="arabicFont">سجل المكافات</h4>
+            </div>
+        </div>
+
+        <div (click)="router.navigate(['/HR/penalityrequest'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Penality Request</h4>
+                <h4 class="arabicFont">طلب جزاء</h4>
+            </div>
+        </div>
+
+        <div (click)="router.navigate(['/HR/penalityhistory'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Penality History</h4>
+                <h4 class="arabicFont">سجل الجزاءات</h4>
+            </div>
+        </div>
+
+        
+
+        <div (click)="router.navigate(['/HR/importpayrollfiles'])" class="col-12 col-md-6 col-lg-3 p-2">
+            <div class=" text-center cardContainer p-3">
+                <h4>Send Payroll Slip</h4>
+                <h4 class="arabicFont">ارسال مفردات المرتب</h4>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row d-flex justify-content-end">
+        <div class="col-12 col-md-6 col-lg-3 p-2">
+            <div (click)="PageNumber=0" class=" text-center cardContainer p-3">
+                <h4>Back to Main Page</h4>
+                <h4 class="arabicFont">العودة للصفحة الرئيسية</h4>
+            </div>
+        </div>
+    </div>
+</div>
