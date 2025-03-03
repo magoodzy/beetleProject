@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthGuard  {
-  userToken:any;
+  userToken:any=localStorage.getItem("token")
   
   constructor(public router:Router){}
   canActivate(
@@ -14,9 +14,10 @@ export class AuthGuard  {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       if(!this.userToken){
         this.router.navigate(['/login'])
+        
         return true
       }else{
-        return false
+        return true
       }
   }
   

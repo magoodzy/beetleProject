@@ -1,0 +1,69 @@
+
+<div [dir]="SharedService.Content.dir" class="container">
+    <div class="row py-md-1 d-flex justify-content-center ">
+        <div class="  col-10 col-md-8 col-lg-6 col-xl-5 p-0 formContainer mt-4 mt-md-4 mb-3">
+            <div class="vacationHeader p-3 d-flex justify-content-center align-items-end">
+                <div>
+                  <h2 class=" text-center mb-1">{{SharedService.Content.addNewUser.title}} </h2>
+                  <h2 style="letter-spacing: 0px" class="text-center arabicFont"></h2>
+                </div>
+            </div>
+            <div class="p-md-4 p-4 bg-light inputContainer">
+
+                      
+                    
+                    <div class="mb-3">
+                      <label class="form-label">{{SharedService.Content.addNewUser.codeTitle}} </label>
+                      <input class="form-control" type="number" name="code" #code >
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">{{SharedService.Content.addNewUser.nameTitle}} </label>
+                        <input class="form-control" type="text" name="name" #name >
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">{{SharedService.Content.addNewUser.phoneTitle}} </label>
+                        <input class="form-control" type="tel" name="phone" #phone >
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">{{SharedService.Content.addNewUser.emailTitle}} </label>
+                        <input class="form-control" type="email" name="email" #email >
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">{{SharedService.Content.addNewUser.roleTitle}} </label>
+                        <select class="form-select" name="role" #role>
+                            <option value="" disabled selected></option>
+                            <option value="Admin">Admin</option>
+                            <option value="Basic">Basic</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">{{SharedService.Content.addNewUser.activeTitle}} </label>
+                        <select class="form-select" name="active" #active>
+                            <option value="" disabled selected></option>
+                            <option value="Active">Active</option>
+                            <option value="Soft_deleted">Soft_deleted</option>
+                        </select>
+                    </div>
+
+                  <div class="mt-3">
+                    <button (click)="addNewUser(code.value,name.value,phone.value,email.value,role.value,active.value)" class="btn w-100 submitBtn">{{SharedService.Content.addNewUser.button}}</button>
+                    <p  style=" font-size: 12px;" class="mt-3 text-center">{{errMsg}}</p>
+                  </div>
+                  <div *ngIf="isSpinner" class="mt-3 d-flex justify-content-center">
+                    <div style="color: #29378f !important;" class="spinner-border text-primary" role="status">
+                      <span class="visually-hidden">Loading...</span>
+                    </div>
+                  </div>
+
+
+                    
+            </div>
+        </div>
+    </div>
+</div>
+

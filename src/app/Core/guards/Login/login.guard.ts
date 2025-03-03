@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginGuard  {
-  userToken:any;
+  userToken:any=localStorage.getItem("token")
   constructor(public router:Router){}
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -14,7 +14,7 @@ export class LoginGuard  {
         this.router.navigate(['/home']);
         return true
       } else {
-        return false
+        return true
       }
   }
   

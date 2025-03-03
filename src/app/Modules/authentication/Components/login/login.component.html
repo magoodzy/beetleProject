@@ -1,0 +1,35 @@
+
+<div [dir]="sharedService.Content.dir" class="container">
+    <div class="row py-md-5 d-flex justify-content-center ">
+     
+        <div class="  col-10 col-md-8 col-lg-4 p-0 formContainer my-md-5">
+            <div class="loginHeader p-3">
+                <h2 class=" text-center">{{sharedService.Content.loginPage.title}}</h2>
+            </div>
+            <div class="px-md-5 p-4 bg-light inputContainer">
+                <form #loginForm = "ngForm" (ngSubmit)="login(loginForm)">
+                    <div class="mb-2">
+                      <label for="exampleInputEmail1" class="form-label">{{sharedService.Content.loginPage.codeTitle}} <span style="color: red;">*</span></label>
+                      <input  ngModel required name="subCode" #subCode="ngModel"  type="text" class="form-control" >
+                    </div>
+                    <div class="mb-2">
+                      <label for="exampleInputPassword1" class="form-label">{{sharedService.Content.loginPage.passwordTitle}} <span style="color: red;">*</span></label>
+                      <input required  ngModel required name="password" #password="ngModel" type="password" class="form-control" id="exampleInputPassword1">
+
+                    </div>
+                   
+                    <div class="mt-3">
+                      <button type="submit" class="btn w-100 submitBtn">{{sharedService.Content.loginPage.button}}</button>
+                      <p [hidden]="hideValidation" style="color: red; font-size: 12px;" class="mt-3 text-center">{{sharedService.Content.loginPage.validationMsg}}</p>
+                    </div>
+                    <div *ngIf="isSpinner" class="mt-3 d-flex justify-content-center">
+                      <div style="color: #209f30 !important;" class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>

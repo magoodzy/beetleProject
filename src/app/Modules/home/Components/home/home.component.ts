@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedService } from '../../../../Shared/Services/shared.service';
 
 @Component({
   selector: 'app-home',
@@ -8,25 +9,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  System=localStorage.getItem('System');
 
-  PageNumber:number=0
 /**
  *
  */
-constructor(public router:Router) {
-  
-}
+  constructor(public router:Router, public SharedService:SharedService) {
+    
+  }
 
 
-ngOnInit(): void {
-  
-}
+  ngOnInit(): void {
+    
+  }
 
-openSystem(type:string){
-  localStorage.removeItem('System');
-  localStorage.setItem('System',type);
-  window.location.reload();
-}
+
+  routeToPage(url:string){
+    this.router.navigate([url])
+  }
 
 }

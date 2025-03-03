@@ -10,16 +10,24 @@ const routes: Routes = [
     redirectTo:'/home',
     pathMatch:'full'
   },
+
   {
     path: 'home',
     loadChildren: () => import('./Modules/home/home.module').then((m) => m.HomeModule),
-    // canActivate: [AuthGuard]   ----------------- enabling the guard
+    canActivate: [AuthGuard]
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./Modules/authentication/authentication.module').then((m) => m.AuthenticationModule),
+    canActivate: [LoginGuard]
+  },
+
   {
     path: 'task',
     loadChildren: () => import('./Modules/task/task.module').then((m) => m.TaskModule),
-    // canActivate: [AuthGuard]   ----------------- enabling the guard
+    canActivate: [AuthGuard]
   },
+ 
 ]
 
 @NgModule({
