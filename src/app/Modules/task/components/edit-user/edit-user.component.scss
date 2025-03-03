@@ -1,0 +1,151 @@
+.formContainer {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    select,input,textarea{
+        font-size: 13px;
+    }
+   
+
+    .borderRed{
+        border-color: red;
+    }
+    
+   .inputContainer{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    form{
+        input{
+            box-shadow: none !important;
+        }
+        input:focus{
+            border-color: #209f30;
+        }
+        mat-date-range-input{
+            .rangeLabel{
+                font-size: 12px;
+            }
+            input{
+                font-size: 16px;
+            }
+        }
+        label{
+            color: #209f30;
+            font-size: 12px;
+        }
+        .firstBtn{
+            color: #209f30;
+            letter-spacing: 2px;
+            background: none;
+            border: none;
+
+        }
+        .firstBtn:hover{
+            color: gray;
+            box-shadow: none ;
+
+        }
+       
+        .form-floating{
+            label{
+                color: gray !important;
+                font-size: 12px;
+            }
+        }
+    }
+   }
+}
+.vacationHeader{
+    background-color: #209f30;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    h2{
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+    .historyBtn{
+        font-size: 10px;
+        cursor: pointer;
+    }
+    .historyBtn:hover{
+        color:#ef433d
+    }
+}
+.myTable{
+    th,td{
+        font-size: 11px !important;
+        border: 1px solid gainsboro;
+    }
+}
+
+/* Styles for the toggle button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px; /* Reduced width */
+    height: 20px; /* Reduced height */
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 10px; /* Reduced border radius */
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px; /* Reduced size */
+    width: 16px; /* Reduced size */
+    left: 2px; /* Adjusted position */
+    bottom: 2px; /* Adjusted position */
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%; /* Rounded shape */
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(20px); /* Adjusted translateX value */
+    -ms-transform: translateX(20px); /* Adjusted translateX value */
+    transform: translateX(20px); /* Adjusted translateX value */
+  }
+
+  .submitBtn{
+    background-color: white;
+    border:1px solid #209f30;
+    border-radius: 6px;
+    color: #209f30;
+    letter-spacing: 3px;
+    box-shadow: none ;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.1s ease-in-out;
+}
+
+.submitBtn:hover{
+    background-color: #209f30;
+    border:1px solid #209f30;
+    color: white;
+}

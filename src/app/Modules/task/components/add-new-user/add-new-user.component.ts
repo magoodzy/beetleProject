@@ -23,19 +23,20 @@ export class AddNewUserComponent implements OnInit {
   }
 
 
-  addNewUser(code:string,name:string,phone:string,email:string,role:string,active:string){
-    this.isSpinner=true
+  addNewUser(code:HTMLInputElement,name:HTMLInputElement,phone:HTMLInputElement,email:HTMLInputElement,role:HTMLSelectElement,active:HTMLSelectElement){
+    this.isSpinner=true;
+    this.errMsg=""
     var usersJson:string|any=localStorage.getItem("users")
     var users=JSON.parse(usersJson)
 
     var user=new Users()
 
-    user.id=Number(code)
-    user.Status=active
-    user.email=email
-    user.phone=phone
-    user.name=name
-    user.role=role
+    user.id=Number(code.value)
+    user.Status=active.value
+    user.email=email.value
+    user.phone=phone.value
+    user.name=name.value
+    user.role=role.value
 
     users.push(user)
 
@@ -43,5 +44,14 @@ export class AddNewUserComponent implements OnInit {
     localStorage.setItem("users",JSON.stringify(users))
     this.isSpinner=false
     this.errMsg='User added successfully!'
+
+
+    code.value=""
+    active.value=""
+    email.value=""
+    phone.value=""
+    name.value=""
+    role.value=""
+
   }
 }

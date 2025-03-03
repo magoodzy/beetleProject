@@ -1,5 +1,38 @@
-table th,td{
-    border: 1px solid gainsboro;
-    text-align: center;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
     padding: 10px;
-}
+    text-align: left;
+    border: 1px solid gainsboro;
+
+  }
+  
+  th {
+    cursor: pointer;
+    background-color: #f4f4f4;
+  }
+  
+  th:hover {
+    background-color: #ddd;
+  }
+  
+  input {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button.active {
+    background-color: #007bff;
+    color: white;
+  }

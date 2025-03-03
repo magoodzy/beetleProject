@@ -15,9 +15,9 @@ export class AppComponent {
 
   LanguageContent = new ArabicEnglishContent();
   ListOfUsers:Users[]=[
-    {id:1,name:"ahmed",email:"a@test.com",phone:"4353453543",Status:"active",role:"Admin"},
-    {id:2,name:"omar",email:"b@test.com",phone:"372636722",Status:"active",role:"Basic"},
-    {id:3,name:"ali",email:"c@test.com",phone:"82736",Status:"soft_deleted",role:"Basic"},
+    {id:1,name:"ahmed",email:"a@test.com",phone:"4353453543",Status:"Active",role:"Admin"},
+    {id:2,name:"omar",email:"b@test.com",phone:"372636722",Status:"Active",role:"Basic"},
+    {id:3,name:"ali",email:"c@test.com",phone:"82736",Status:"Soft_deleted",role:"Basic"},
   ]
 
   constructor(public SharedService:SharedService) {
@@ -27,8 +27,9 @@ export class AppComponent {
 
 
   getSetLocalStorage(){
-      localStorage.removeItem("users")
+    if (!localStorage.getItem("users")){
       localStorage.setItem("users",JSON.stringify(this.ListOfUsers))
+    }
     var users:string|any = localStorage.getItem("users")
     this.ListOfUsers=JSON.parse(users)
   }

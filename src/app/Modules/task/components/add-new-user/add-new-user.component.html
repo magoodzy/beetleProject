@@ -1,5 +1,5 @@
 
-<div [dir]="SharedService.Content.dir" class="container">
+<div [attr.dir]="SharedService.Content.dir" class="container">
     <div class="row py-md-1 d-flex justify-content-center ">
         <div class="  col-10 col-md-8 col-lg-6 col-xl-5 p-0 formContainer mt-4 mt-md-4 mb-3">
             <div class="vacationHeader p-3 d-flex justify-content-center align-items-end">
@@ -51,7 +51,7 @@
                     </div>
 
                   <div class="mt-3">
-                    <button (click)="addNewUser(code.value,name.value,phone.value,email.value,role.value,active.value)" class="btn w-100 submitBtn">{{SharedService.Content.addNewUser.button}}</button>
+                    <button (click)="addNewUser(code,name,phone,email,role,active)" class="btn w-100 submitBtn">{{SharedService.Content.addNewUser.button}}</button>
                     <p  style=" font-size: 12px;" class="mt-3 text-center">{{errMsg}}</p>
                   </div>
                   <div *ngIf="isSpinner" class="mt-3 d-flex justify-content-center">

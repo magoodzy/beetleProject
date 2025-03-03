@@ -1,0 +1,46 @@
+<div class="p-4">
+  
+                    <div class="mb-3">
+                        <label class="form-label">{{SharedService.Content.addNewUser.codeTitle}} </label>
+                        <input class="form-control" [value]="data.id" disabled type="number" name="code" #code >
+                      </div>
+  
+                      <div class="mb-3">
+                          <label class="form-label">{{SharedService.Content.addNewUser.nameTitle}} </label>
+                          <input class="form-control" type="text" [value]="data.name" name="name" #name >
+                      </div>
+  
+                      <div class="mb-3">
+                          <label class="form-label">{{SharedService.Content.addNewUser.phoneTitle}} </label>
+                          <input class="form-control" type="tel" [value]="data.phone" name="phone" #phone >
+                      </div>
+  
+                      <div class="mb-3">
+                          <label class="form-label">{{SharedService.Content.addNewUser.emailTitle}} </label>
+                          <input class="form-control" type="email" [value]="data.email" name="email" #email >
+                      </div>
+  
+                      <div class="mb-3">
+                          <label class="form-label">{{SharedService.Content.addNewUser.roleTitle}} </label>
+                          <select class="form-select"  name="role" #role>
+                              <option value="" disabled selected></option>
+                              <option [selected]="data.role=='Admin'" value="Admin">Admin</option>
+                              <option  [selected]="data.role=='Basic'" value="Basic">Basic</option>
+                          </select>
+                      </div>
+  
+                      <div class="mb-3">
+                          <label class="form-label">{{SharedService.Content.addNewUser.activeTitle}} </label>
+                          <select class="form-select" name="active" #active>
+                              <option value="" disabled selected></option>
+                              <option [selected]="data.Status=='Active'" value="Active">Active</option>
+                              <option  [selected]="data.Status=='Soft_deleted'" value="Soft_deleted">Soft_deleted</option>
+                          </select>
+                      </div>
+  
+                    <div class="mt-3">
+                      <button (click)="editUser(code,name,phone,email,role,active)" class="btn w-100 submitBtn">{{SharedService.Content.addNewUser.button}}</button>
+                      <p  style=" font-size: 12px;" class="mt-3 text-center">{{errMsg}}</p>
+                    </div>
+
+            </div> 
